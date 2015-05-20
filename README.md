@@ -6,7 +6,7 @@ Marvell_Patches
 
 How to add these patches in my repo? you need add this in local_manifest.xml
 
-      <project path="patches" name="Epirex/Marvell_Patches" revision="master" remote="github" />
+      <project path="patches" name="MaxiCM/Marvell_Patches" revision="master" remote="github" />
 
 --------------------------------------------------------------
 
