@@ -6,6 +6,7 @@ then
   cd frameworks/native		
   git fetch https://github.com/MaxiCM/android_frameworks_native patch-2
   git cherry-pick a65cd1e45f9b5221529804a848520f55a4467d90
+  git cherry-pick 78c2dae904d996911b53003c8973c99fe34ee288
   cd ../..		
 fi
 
