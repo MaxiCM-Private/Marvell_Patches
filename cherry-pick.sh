@@ -4,8 +4,8 @@ if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]
 then		
   echo -e $CL_BLU"Cherrypicking native patches"$CL_RST		
   cd frameworks/native		
-  git fetch https://github.com/MaxiCM/android_frameworks_native patch-1		
-  git cherry-pick 1ae578773ad30bf5a991eb0226be47c0110dea9b		
+  git fetch https://github.com/MaxiCM/android_frameworks_native patch-2
+  git cherry-pick a65cd1e45f9b5221529804a848520f55a4467d90
   cd ../..		
 fi
 
