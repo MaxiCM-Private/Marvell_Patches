@@ -10,6 +10,15 @@ then
   cd ../..		
 fi
 
+if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]		
+then		
+  echo -e $CL_BLU"Cherrypicking base patches"$CL_RST		
+  cd frameworks/base		
+  git fetch https://github.com/MaxiCM/android_frameworks_base cm-11.0
+  git cherry-pick ffbd270ae534adaa5f5a2099e18214939324e9d8
+  cd ../..		
+fi
+
 if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]
 then
   echo -e $CL_BLU"Cherrypicking build patches"$CL_RST
