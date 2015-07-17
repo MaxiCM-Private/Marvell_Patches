@@ -10,6 +10,17 @@ if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]
 fi
 
 if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]
+ then
+  echo -e $CL_BLU"Cherrypicking native patches"$CL_RST
+  cd frameworks/native
+  git fetch https://github.com/MaxiCM/android_frameworks_native patch-7
+  git cherry-pick bbc2e59275bdb15144fd7b8fe3872ee386656a6f
+  git cherry-pick 492d154b69e1ca7fdc74516201dba34a5106e4ed
+  git cherry-pick fcdf21fda81b6d39a440290e831f77fa8f5415ab
+  cd ../..
+fi
+
+if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]
 then
   echo -e $CL_BLU"Cherrypicking hardware patches"$CL_RST
   cd hardware/libhardware_legacy
