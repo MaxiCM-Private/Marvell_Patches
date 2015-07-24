@@ -15,5 +15,6 @@ if [ "$REPO_BRANCH" = "cm-11.0" ] || [ "$DEVICE" = "degaswifi" ]
   cd frameworks/av
   git fetch https://github.com/MaxiCM/android_frameworks_av patch-1
   git cherry-pick 26de0785441924c383ba90e8b5ef0913c31a8ff3
+  git cherry-pick 663e657af0a1f350049b0e2b0d4bf8bca134eff2
   cd ../..
 fi
